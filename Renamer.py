@@ -8,10 +8,10 @@ Created on Wed May 22 19:10:11 2024
 
 import os
 import sys
-folder = '/media/thiagofialhos/BKP/images/Vanessa Chaves'
+folder = '<path to folder where files are located>'#Example: /home/<username>/Downloads
 for filename in os.listdir(folder):
     infilename = os.path.join(folder,filename)
     if not os.path.isfile(infilename): continue
     oldbase = os.path.splitext(filename)
-    newname = infilename.replace('.jpg.!qB', '.jpg')
+    newname = infilename.replace('.xls', '.xlsx')
     output = os.rename(infilename, newname)

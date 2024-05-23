@@ -10,7 +10,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-site = 'uol.com.br'
+site = 'http://uol.com.br'
 
 response = requests.get(site)
 

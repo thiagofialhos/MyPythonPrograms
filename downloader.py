@@ -27,9 +27,6 @@ for url in urls:
          continue
     with open(filename.group(1), 'wb') as f:
         if 'http' not in url:
-            # sometimes an image source can be relative 
-            # if it is provide the base url which also happens 
-            # to be the site variable atm. 
             url = '{}{}'.format(site, url)
         response = requests.get(url)
         f.write(response.content)
